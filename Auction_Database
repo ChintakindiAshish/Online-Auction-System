@@ -1,0 +1,14 @@
+create database CodeSkate003;
+
+create table Admin(Name varchar(20),Nickname varchar(20),Password varchar(20));
+insert into Admin values('Ashish','Ashu','Ashish@123');
+
+create table Bid(ID int,Consumer_Name varchar(30),Bid_Price int,Constomer_ID int);
+
+create table Customer(Id int primary key auto_increment,Name varchar(30),Nickname varchar(20),Address varchar(20),DOB date,Mob bigint,Password varchar(30));
+
+create table Item(ID int primary key auto_increment,Name varchar(30),Owner_Name varchar(30),Reserve_Price int,Image blob);
+
+create table SoldItem(ID int,Name varchar(30),Owner_Name varchar(30),Reserve_Price int,Image blob,Hammer_Price int,Consumer_ID int,Consumer_Name varchar(30));
+
+create table Status(Auction varchar(20),ID int,Time varchar(10));
